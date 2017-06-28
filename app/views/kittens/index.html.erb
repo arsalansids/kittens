@@ -1,0 +1,15 @@
+<% provide(:title, 'All kittens') %>
+<h1>All kittens</h1>
+
+<ul class="kittens">
+  <% @kittens.each do |kitten| %>
+    <li>
+     	<%= link_to kitten.name, kitten %>
+     	<%= link_to "| edit", edit_kitten_path(kitten.id) %> 
+		<%= link_to "| delete", kitten, method: :delete,
+	                              data: { confirm: "You sure?" } %>
+    </li>
+  <% end %>
+</ul>
+
+

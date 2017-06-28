@@ -1,0 +1,22 @@
+<% provide(:title, @kitten.name) %>
+<div class="column">
+  <aside class="col-md-4">
+    <section>
+      <h3>
+        <%= @kitten.name %>
+      </h3>
+
+    </section>
+  </aside>
+  <section>
+    <h2>
+      This kitty is <%= @kitten.age %> years old  <br /> 
+      With a cutness level of <%= @kitten.cuteness %> <br /> 
+      and it is about <%= @kitten.softness %> soft <br />
+    </h2>
+    <h2>
+      <%= link_to "Delete", @kitten, method: :delete,
+                                data: { confirm: "You sure?" } %>
+    </h2>
+  </section>
+</div>
